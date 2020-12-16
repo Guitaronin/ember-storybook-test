@@ -15,11 +15,22 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "storybook": "start-storybook -p 6006 -s dist --no-dll",
+    "build-storybook": "build-storybook -s dist --no-dll"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
     "@ember/jquery": "^0.6.0",
     "@ember/optional-features": "^0.7.0",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/ember": "^6.0.28",
+    "@storybook/ember-cli-storybook": "^0.2.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-ember-modules-api-polyfill": "^3.2.0",
+    "babel-plugin-htmlbars-inline-precompile": "^4.2.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^5.0.0",
     "ember-cli": "~3.11.0",
@@ -44,9 +55,13 @@
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.4"
+    "qunit-dom": "^0.8.4",
+    "react-is": "^17.0.1"
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5"
   }
 }
